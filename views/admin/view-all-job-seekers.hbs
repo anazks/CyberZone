@@ -1,0 +1,40 @@
+<link rel='stylesheet' href='/stylesheets/user.css' />
+<style>
+    body {
+        background: linear-gradient(90deg, #bdc3c7, #2c3e50);
+    }
+</style>
+
+<div class="login-page" style="width: 80vw">
+    <div class="form">
+        <div style="display: flex;justify-content: space-between;margin-bottom:15px">
+            <a href="/admin"><button style="background: rgb(206, 16, 16);"> Back</button></a>
+            <h2 class="title" style="color: #2c3e50;"> Complaint List</h2>
+            <div></div>
+        </div>
+        <table id="main_table">
+            <thead>
+                <tr>
+                    <th>complaints</th>
+                    <th>Email</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {{#each jobSeekers}}
+                <tr>
+                    <td>{{complaints}}</td>
+                    <td>{{email}}</td>
+                  
+                   
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#main_table").dataTable();
+    });
+</script>
